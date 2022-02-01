@@ -29,7 +29,7 @@ export default {
       chars: []
     }
   },
-  mounted(this.url) {
+  mounted() {
      fetch(this.url)
           .then(res => 
               res.json()

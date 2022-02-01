@@ -2,7 +2,7 @@
   <div class="home">
    Hello People
   </div>
-  <form @submit.prevent="handleSearch">
+  <form @submit="handleSearch">
     <input type="text" name="search" v-model="search" />
     <button type="submit">Search</button>
   </form>
@@ -29,7 +29,7 @@ export default {
       chars: []
     }
   },
-  mounted(this.url) {
+  mounted() {
      fetch(this.url)
           .then(res => 
               res.json()
@@ -37,13 +37,13 @@ export default {
           .then(data => {
             this.chars = data
             console.log(this.chars)
-            console.log(this.url)
           })
           },
   methods: {
-    handleSearch() {
+    handleSubmit(e) {
+      updated() ;{
       this.url = `https://www.breakingbadapi.com/api/characters?name=${this.search}?limit=10&offset=10`
-      console.log(this.url)
+      }
     }
   }
 }

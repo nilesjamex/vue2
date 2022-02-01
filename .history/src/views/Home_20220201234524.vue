@@ -29,19 +29,19 @@ export default {
       chars: []
     }
   },
-  mounted(this.url) {
+  mounted() {
      fetch(this.url)
           .then(res => 
               res.json()
           )
           .then(data => {
             this.chars = data
-            console.log(this.chars)
             console.log(this.url)
+            console.log(this.chars)
           })
           },
   methods: {
-    handleSearch() {
+    handleSubmit() {
       this.url = `https://www.breakingbadapi.com/api/characters?name=${this.search}?limit=10&offset=10`
       console.log(this.url)
     }

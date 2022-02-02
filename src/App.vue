@@ -1,7 +1,4 @@
 <template>
-  <div id="nav">
-    <h2> Breaking Bad </h2>
-  </div>
   <router-view/>
 </template>
 
@@ -12,10 +9,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #nav a {

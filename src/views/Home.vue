@@ -35,7 +35,8 @@ export default {
   },
   methods: {
     handleSearch() {
-      console.log(this.url)
+      this.url = `https://www.breakingbadapi.com/api/characters?name=${this.search}`
+
     },
     getData() {
        fetch(this.url)
@@ -50,7 +51,11 @@ export default {
   },
    mounted() {
           this.getData()
-          }
+          },
+   updated() {
+      console.log(this.url)
+     this.getData()
+   }
 }
 </script>
 

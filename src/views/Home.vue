@@ -10,7 +10,9 @@
   </form>
   <div v-for="char in chars" :key="char.id">
     <div class="charlist">
-      <div></div>
+      <div>
+        <p> {{ char.name }} </p>
+      </div>
     </div>
   </div>
    </div>
@@ -53,21 +55,8 @@ export default {
 </script>
 
 <style scoped>
-.overlay {
-    background: url(../assets/bghome.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    z-index: 1;
-}
+
 .home {
-  background: url(../assets/overlay.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
+
 }
 </style>

@@ -18,6 +18,7 @@
 
 <script>
 import {gsap} from 'gsap'
+import {watch} from 'vue'
 export default {
   name: 'Home',
   components: {
@@ -30,15 +31,12 @@ export default {
       chars: []
     }
   },
-  mounted() {
-     gsap.to(this.$refs.overlay, {
-      delay: 1,
-      top: -100,
-      ease: Expo.easeInOut
-    }
-     )
-
-     fetch(this.url)
+  methods: {
+    handleSearch() {
+      console.log(this.url)
+    },
+    getData() {
+       fetch(this.url)
           .then(res => 
               res.json()
           )
@@ -46,12 +44,11 @@ export default {
             this.chars = data
             console.log(this.chars)
           })
-          },
-  methods: {
-    handleSearch() {
-      console.log(this.url)
     }
-  }
+  },
+   mounted() {
+          this.getData()
+          }
 }
 </script>
 

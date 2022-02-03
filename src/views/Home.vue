@@ -8,8 +8,8 @@
     <input type="text" name="search" v-model="search" />
     <button type="submit">Search</button>
   </form>
+   <div class="charlist">
   <div v-for="char in chars" :key="char.id">
-    <div class="charlist">
       <div>
         <p> {{ char.name }} </p>
       </div>
@@ -56,7 +56,8 @@ export default {
 
 <style scoped>
 
-.home {
-
+.charlist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 </style>

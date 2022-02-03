@@ -9,9 +9,12 @@
     <button type="submit">Search</button>
   </form>
    <div class="charlist">
-  <div v-for="char in chars" :key="char.id">
-      <div>
+  <div class="gridlist" v-for="char in chars" :key="char.id">
+    <div>
+      <div class="subgrid">
+        <img class="img" :src="char.img" alt="alt">
         <p> {{ char.name }} </p>
+      </div>
       </div>
     </div>
   </div>
@@ -64,5 +67,20 @@ export default {
 .charlist {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  padding: 20px 7%;
+}
+.gridlist {
+  height: 450px;
+  width: 100%;
+}
+.subgrid {
+  background-color: #06394e;
+  margin: 1rem;
+}
+.img {
+  object-fit: contain;
+  height: 350px;
+  width: 100%;
 }
 </style>

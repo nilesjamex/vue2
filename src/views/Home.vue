@@ -8,12 +8,20 @@
     <input type="text" name="search" v-model="search" />
     <button type="submit">Search</button>
   </form>
+  <select name="" id="select" v-model="select" v-on:change="selectclass">
+    <option value="">Default</option>
+    <option value="Breaking+Bad">Breaking Bad</option>
+    <option value="Better+Call+Saul">Better call saul</option>
+  </select>
    <div class="charlist">
   <div class="gridlist" v-for="char in chars" :key="char.id">
     <div>
       <div class="subgrid">
         <img class="img" :src="char.img" alt="alt">
         <p> {{ char.name }} </p>
+        <router-link :to="{ name: `Details`, params: {id: char.char_id} }">
+        <button> more</button>
+        </router-link>
       </div>
       </div>
     </div>
@@ -22,8 +30,6 @@
 </template>
 
 <script>
-import {gsap} from 'gsap'
-import {watch} from 'vue'
 export default {
   name: 'Home',
   components: {
@@ -33,14 +39,17 @@ export default {
     return {
       url: 'https://www.breakingbadapi.com/api/characters?limit=10&offset=10',
       search: "",
+      select: "",
       chars: []
     }
   },
   methods: {
     handleSearch() {
       this.url = `https://www.breakingbadapi.com/api/characters?name=${this.search}`
-
-    },
+      },
+      selectclass() {
+      this.url = `https://www.breakingbadapi.com/api/characters?category=${this.select}`
+      },
     getData() {
        fetch(this.url)
           .then(res => 

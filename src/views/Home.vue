@@ -64,10 +64,15 @@ export default {
    mounted() {
           this.getData()
           },
-   updated() {
-      console.log(this.url)
-     this.getData()
-   }
+    beforeUpdate() {
+      this.url = `https://www.breakingbadapi.com/api/characters?name=${this.search}`
+       this.url = `https://www.breakingbadapi.com/api/characters?category=${this.select}`
+      //  this.getData()
+    },
+  //  updated() {
+  //     console.log(this.url)
+  //    this.getData()
+  //  }
 }
 </script>
 

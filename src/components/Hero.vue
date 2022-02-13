@@ -17,9 +17,9 @@
                   Supported by:
               </h5>
               <div class="heroSponsor__list">
-                  <img src="" alt="">
-                  <img src="" alt="">
-                  <img src="" alt="">
+                  <img src="../assets/access.png" alt="">
+                  <img src="../assets/kuda.png" alt="">
+                  <img src="../assets/keystone.png" alt="">
               </div>
           </div>
       </div>
@@ -83,7 +83,8 @@ export default {
     color: #045C58;
 }
 .heroSponsor {
-    place-items: flex-end;
+    align-self: flex-end;
+    margin-top: 4rem;
 }
 .heroSponsor__text {
     font-family: 'Karla' sans-serif;
@@ -94,5 +95,9 @@ export default {
     /* identical to box height, or 167% */
     letter-spacing: 0.01em;
     color: #6E6E71;
+}
+.heroSponsor__list {
+    display: flex;
+    grid-gap: 1.3rem;
 }
 </style>

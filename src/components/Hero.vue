@@ -74,13 +74,25 @@ export default {
 }
 .button1 {
     background: #045C58;
-    color: #fff;
+    font-family: Karla;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
 }
 .button2 {
     background: #CDFCFA;
     border: 1.5px solid #045C58;
     box-sizing: border-box;
-    color: #045C58;
+    font-family: 'Karla' sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #032406;
 }
 .heroSponsor {
     align-self: flex-end;

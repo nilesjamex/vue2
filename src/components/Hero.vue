@@ -30,8 +30,19 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
-
+ mounted() {
+     gsap.from(".hero", {
+         duration: 3,
+         opacity: 0,
+         x: -1000,
+         delay: 0.7,
+         easeIn: 'BounceIn',
+     })
+ }
 }
 </script>
 

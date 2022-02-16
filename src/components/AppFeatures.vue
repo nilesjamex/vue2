@@ -26,7 +26,24 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
+     mounted() {
+     gsap.timeline({ scrollTrigger: {
+         trigger: '.appFeatures',
+         x: 0,
+         end: "+=300",
+         scrub: 1,
+         markers: false
+     }
+     }).from(".featuresplit", {
+         opacity: 0,
+         x: 500,
+         easeIn: 'BounceIn',
+     })
+ },
  data() {
         return {
             features: [

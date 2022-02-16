@@ -9,7 +9,24 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
+     mounted() {
+     gsap.timeline({ ScrollTrigger: {
+         trigger: '.featurelist',
+         start: "center center",
+         scrub: 'true'
+     }
+     }).from(".featureMain", {
+         duration: 3,
+         opacity: 0,
+         x: -1000,
+         delay: 0.7,
+         easeIn: 'BounceIn',
+     })
+ },
     data() {
         return {
             features: [

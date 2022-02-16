@@ -60,10 +60,13 @@
           </div>
       </div>
   </div>
+  <Socials />
 </template>
 
 <script>
+import Socials from "./Socials.vue"
 export default {
+    components: { Socials }
 
 }
 </script>

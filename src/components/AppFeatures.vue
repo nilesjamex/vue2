@@ -102,5 +102,10 @@ button {
     color: #045C58;
     width: 310px;
     padding: 0 3rem;
+    transition: all 0.5s ease-in-out;
+}
+button:hover {
+    background-color: #045C58;
+    color: white;
 }
 </style>

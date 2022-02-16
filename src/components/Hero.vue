@@ -81,8 +81,18 @@ export default {
     line-height: 30px;
     letter-spacing: 0.01em;
     color: #FFFFFF;
+    transition: all 0.6s ease-in-out;
+}
+.button1:hover {
+    height: 60px;
+    box-shadow: 5px 10px #CDFCFA inset;
+}
+.button2:hover {
+    height: 60px;
+    box-shadow: 5px 10px #045C58 inset;
 }
 .button2 {
+    transition: all 0.6s ease-in-out;
     background: #CDFCFA;
     border: 1.5px solid #045C58;
     box-sizing: border-box;

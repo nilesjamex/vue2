@@ -118,7 +118,7 @@ export default {
      margin: 1rem 0;
  }
  ::placeholder {
-     font-family: Karla;
+     font-family: 'Karla' sans-serif;
      font-style: normal;
      font-weight: 500;
      font-size: 18px;

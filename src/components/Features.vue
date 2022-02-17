@@ -14,15 +14,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 export default {
      mounted() {
-     gsap.timeline({ ScrollTrigger: {
-         trigger: '.featurelist',
-         start: "center center",
+     gsap.timeline({ scrollTrigger: {
+         trigger: '.featureMain',
+         x: 400,
+         end: "+=500",
          scrub: 'true'
      }
-     }).from(".featureMain", {
-         duration: 3,
+     })
+     .from(".featurelist", {
          opacity: 0,
-         x: -1000,
+         y: 200,
          delay: 0.7,
          easeIn: 'BounceIn',
      })

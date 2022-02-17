@@ -1,9 +1,9 @@
 <template>
   <div class="appFeatures">
-      <div>
+      <div class="square">
           <img src="../assets/appfeatures.png" alt="">
       </div>
-      <div>
+      <div class="square">
           <div v-for="feature in features" :key="feature.id">
               <div class="featuresplit">
                   <div>
@@ -16,7 +16,7 @@
               </div>
           </div>
           <div>
-              <button>GET STARTED <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button @click="flipit" >GET STARTED <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16.8188 7.00439C16.8188 6.73193 16.7046 6.46826 16.5024 6.2749L10.728 0.500488C10.4995 0.280762 10.2622 0.184082 10.0161 0.184082C9.45361 0.184082 9.04932 0.57959 9.04932 1.11572C9.04932 1.39697 9.16357 1.63428 9.33936 1.81006L11.3169 3.81396L13.8657 6.14307L11.8267 6.02002H1.17432C0.585449 6.02002 0.181152 6.42432 0.181152 7.00439C0.181152 7.57568 0.585449 7.97998 1.17432 7.97998H11.8267L13.8657 7.85693L11.3169 10.186L9.33936 12.1899C9.16357 12.3657 9.04932 12.603 9.04932 12.8843C9.04932 13.4204 9.45361 13.8159 10.0161 13.8159C10.2622 13.8159 10.4995 13.7192 10.7104 13.5171L16.5024 7.7251C16.7046 7.53174 16.8188 7.26807 16.8188 7.00439Z" fill="#2A52E2"/>
 </svg>
 </button>
@@ -28,7 +28,8 @@
 <script>
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
+import { Flip } from 'gsap/Flip'
+gsap.registerPlugin(ScrollTrigger, Flip)
 export default {
      mounted() {
      gsap.timeline({ scrollTrigger: {
@@ -40,7 +41,7 @@ export default {
      }
      }).from(".featuresplit", {
          opacity: 0,
-         x: 500,
+         x: -200,
          easeIn: 'BounceIn',
      })
  },

@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-      <div class="herotext">
+      <div class="herotext square">
           <h1 class="herotext__head">
               Your No.1 NFT market place for rare collections
           </h1>
@@ -9,7 +9,7 @@
               like these sweet mornings of spring which I enjoy with my whole heart.
           </p>
           <div class="buttonDiv">
-              <button class="button1">Download App</button>
+              <button @click="flipit" class="button1">Download App</button>
               <button class="button2">Visit MarketPlace</button>
           </div>
           <div class="heroSponsor">
@@ -23,8 +23,8 @@
               </div>
           </div>
       </div>
-      <div>
-          <img src="../assets/hero.png" alt="hero">
+      <div class="square">
+          <img class="image" src="../assets/hero.png" alt="hero">
       </div>
   </div>
 </template>
@@ -32,14 +32,61 @@
 <script>
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
+import { Flip } from 'gsap/Flip'
+gsap.registerPlugin(ScrollTrigger, Flip)
 export default {
+    methods: {
+     flipit() {
+         const squares = gsap.utils.toArray(".square");
+          const state = Flip.getState(squares);
+          swap(squares);
+          Flip.from(state, {duration: 2, ease: "power1.inOut"});
+          function swap([a, b]) {
+  a.parentNode.children[0] === a ? a.parentNode.appendChild(a) : a.parentNode.appendChild(b);
+}
+     }
+ },
  mounted() {
-     gsap.from(".hero", {
-         duration: 3,
+     gsap.timeline()
+     .from(".herotext__head", {
+         duration: 0.5,
          opacity: 0,
-         x: -1000,
+         y: -100,
+         delay: 0.3,
+         easeIn: 'BounceIn',
+     })
+     .from(".herotext__sub", {
+         duration: 0.5,
+         opacity: 0,
+         y: -100,
+         delay: 0.5,
+         easeIn: 'BounceIn',
+     })
+     .from(".buttonDiv", {
+         duration: 0.5,
+         opacity: 0,
+         y: -100,
          delay: 0.7,
+         easeIn: 'BounceIn',
+     })
+     .from(".heroAponsor", {
+         duration: 0.5,
+         opacity: 0,
+         y: -100,
+         delay: 0.5,
+         easeIn: 'BounceIn',
+     })
+     .from(".heroSponsor", {
+         duration: 0.5,
+         opacity: 0,
+         y: 100,
+         delay: 0.3,
+         easeIn: 'BounceIn',
+     })
+     .from(".image", {
+         duration: 0.5,
+         opacity: 0,
+         delay: 0.3,
          easeIn: 'BounceIn',
      })
  }

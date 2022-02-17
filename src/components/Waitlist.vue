@@ -23,7 +23,25 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
+     mounted() {
+     gsap.timeline({ scrollTrigger: {
+         trigger: '.waitsplit',
+         x: 400,
+         end: "+=500",
+         scrub: 'true'
+     }
+     })
+     .from(".waitlist__text", {
+         opacity: 0,
+         x: -350,
+         delay: 0.7,
+         easeIn: 'BounceIn',
+     })
+ },
     data() {
         return {
             email: ''

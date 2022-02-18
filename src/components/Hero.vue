@@ -132,7 +132,7 @@ export default {
 }
 .button1 {
     background: #045C58;
-    font-family: Karla;
+    font-family: 'Karla' sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

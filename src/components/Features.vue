@@ -84,6 +84,46 @@ p {
     letter-spacing: 0.01em;
     /* Gray */
     color: #6E6E71;
-
 }
+
+@media screen and (max-width: 900px) {
+    .featurelist {
+    width: 310px;
+    height: 250px;
+}
+h2 {
+
+    font-size: 1rem;
+    line-height: 30px;
+}
+p {
+    font-size: 1rem;
+    line-height: 30px;
+}
+}
+@media screen and (max-width: 650px) {
+    .featureMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 1rem;
+    justify-content: space-around;
+    text-align: center;
+    padding: 3% 9%;
+}
+    .featurelist {
+    width: 310px;
+    height: 200px;
+}
+h2 {
+
+    font-size: 1rem;
+    line-height: 30px;
+}
+p {
+    font-size: 1rem;
+    line-height: 30px;
+}
+}
+
 </style>

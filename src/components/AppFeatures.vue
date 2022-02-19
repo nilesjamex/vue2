@@ -171,6 +171,9 @@ p {
 .featuresplit {
     grid-gap: 0.9rem;
 }
+hr {
+    display: none;
+}
 button {
     font-size: 18px;
 }

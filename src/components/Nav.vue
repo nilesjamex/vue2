@@ -61,6 +61,7 @@ nav {
     line-height: 45px;
     color: #00C7BE;
     text-transform: uppercase;
+    margin-left: 2rem;
 }
 .menu {
     display: flex;

@@ -143,6 +143,9 @@ export default {
      line-height: 30px;
      width: 100%;
  }
+ svg {
+     display: none;
+ }
  .benefittext {
      padding-left: 1rem;
  }

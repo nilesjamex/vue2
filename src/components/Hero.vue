@@ -277,10 +277,12 @@ export default {
 .button1 {
     width: 170px;
     font-size: 0.7rem;
+    margin-right: 0.7rem;
 }
 .button2 {
     width: 170px;
     font-size: 0.7rem;
+    margin-left: 0.7rem;
 }
 }
 </style>

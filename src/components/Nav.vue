@@ -71,8 +71,6 @@ nav {
 ul {
     display: flex;
     grid-gap: 4rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
 }
 li {
     font-family: 'Karla' sans-serif;
@@ -83,6 +81,8 @@ li {
     /* identical to box height, or 167% */
     letter-spacing: 0.01rem;
     color: #08102D;
+     margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 button {
     font-family: 'poppins' sans-serif;

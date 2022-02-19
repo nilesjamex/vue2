@@ -3,7 +3,7 @@
       <div class="square">
           <img src="../assets/appfeatures.png" alt="">
       </div>
-      <div class="square">
+      <div class="featureslist">
           <div v-for="feature in features" :key="feature.id">
               <div class="featuresplit">
                   <div>
@@ -34,8 +34,8 @@ export default {
      mounted() {
      gsap.timeline({ scrollTrigger: {
          trigger: '.appFeatures',
-         x: 0,
-         end: "+=300",
+         x: 600,
+         end: "+=800",
          scrub: 1,
          markers: false
      }
@@ -125,5 +125,48 @@ button {
 button:hover {
     background-color: #045C58;
     color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    .appFeatures {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 5% 5% 0 0;
+    }
+    .featureslist {
+        padding: 1rem 0 2rem 6rem;
+    }
+    .featuresplit {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .featureslist {
+        padding: 1rem 0 2rem 2rem;
+    }
+    h2 {
+    font-size: 1.3rem;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+}
+p {
+    font-size: 1rem;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+}
+}
+@media screen and (max-width: 650px) {
+    h2 {
+    font-size: 1rem;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+}
+p {
+    font-size: 0.8rem;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+}
 }
 </style>

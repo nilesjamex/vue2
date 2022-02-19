@@ -57,4 +57,32 @@ export default {
  span {
      color: red;
  }
+
+ @media screen and (max-width: 768px) {
+     svg {
+     margin: 0rem 0.8rem;
+ }
+  h5 {
+     font-size: 1rem;
+     line-height: 20px;
+ }
+ }
+ @media screen and (max-width: 768px) {
+     svg {
+     margin: 0rem 0.2rem;
+ }
+  h5 {
+     font-size: 0.8rem;
+     line-height: 20px;
+ }
+ }
+ @media screen and (max-width: 768px) {
+     svg {
+     display: none;
+ }
+  h5 {
+     font-size: 0.8rem;
+     line-height: 20px;
+ }
+ }
 </style>

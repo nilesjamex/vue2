@@ -101,13 +101,12 @@ export default {
 }
 .herotext {
     width: 50%;
-    z-index: 1;
 }
 .herotext__head {
     font-family: 'Karla' sans-serif;
     font-style: bold;
     font-weight: 800;
-    font-size: 60px;
+    font-size: 3.7rem;
     line-height: 90px;
     /* or 150% */
     letter-spacing: 0.02rem;
@@ -119,7 +118,7 @@ export default {
     font-style: normal;
     font-weight: 500;
     font-size: 1.3rem;
-    line-height: 30px;
+    line-height: 1.8;
     text-align: left;
     letter-spacing: 0.01rem;
     color: #6E6E71;
@@ -179,5 +178,98 @@ export default {
 .heroSponsor__list {
     display: flex;
     grid-gap: 1.3rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 3rem;
+}
+.image {
+    width: 90%;
+    padding: 0 0.5rem;
+}
+.herotext {
+    width: 80%;
+}
+.herotext__head {
+    font-family: 'Karla' sans-serif;
+    font-style: bold;
+    font-weight: 800;
+    font-size: 3.7rem;
+    line-height: 90px;
+    letter-spacing: 0.02rem;
+}
+.herotext__sub {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-align: left;
+    letter-spacing: 0.01rem;
+    width: 100%;
+}
+.heroSponsor {
+    margin-bottom: 2.5rem;
+}
+  .buttonDiv {
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    .hero {
+    padding: 1% 1rem;
+}
+    .herotext__head {
+    font-size: 2rem;
+    line-height: 50px;
+    letter-spacing: 0.02rem;
+}
+.herotext__sub {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    text-align: left;
+    letter-spacing: 0.01rem;
+    width: 100%;
+}   
+}
+@media screen and (max-width: 650px) {
+    .hero {
+    padding: 1% 0rem;
+}
+    .herotext__head {
+    font-size: 1.5rem;
+    line-height: 40px;
+    letter-spacing: 0.02rem;
+}
+.herotext__sub {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    text-align: left;
+    letter-spacing: 0.01rem;
+    width: 100%;
+}
+.heroSponsor__list {
+    display: flex;
+    flex-wrap: wrap;
+}   
+}
+@media screen and (max-width: 480px) {
+    .hero {
+    padding: 1% 0rem;
+}
+    .herotext__head {
+    font-size: 1.2rem;
+    line-height: 40px;
+    letter-spacing: 0.02rem;
+}
+.herotext__sub {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    text-align: left;
+    letter-spacing: 0.01rem;
+    width: 100%;
+}  
 }
 </style>

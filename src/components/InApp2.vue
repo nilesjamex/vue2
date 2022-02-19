@@ -82,4 +82,59 @@ p {
   z-index: -1;
   position: absolute;
 }
+
+@media screen and (max-width: 1024px) {
+  .line {
+    display: none;
+  }
+  .InSplit {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 3% 0rem;
+  grid-gap: 5rem;
+}
+img {
+  padding-left: 2rem;
+}
+.InText {
+   padding: 2rem 4rem;
+
+}
+h2 {
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  width: 100%;
+}
+p {
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 0.01em;
+  color: #6E6E71;
+  margin-top: 2rem;
+  width: 100%;
+}
+}
+
+@media screen and (max-width: 900px) {
+  img {
+    width: 90%;
+  }
+.InText {
+   padding: 2rem 4rem;
+
+}
+h2 {
+  font-size: 1.5rem;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+}
+p {
+  font-size: 1rem;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+}
+}
 </style>

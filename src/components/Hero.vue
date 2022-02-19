@@ -250,6 +250,9 @@ export default {
     letter-spacing: 0.01rem;
     width: 100%;
 }
+.heroSponsor {
+    margin-top: 2rem;
+}
 .heroSponsor__list {
     display: flex;
     flex-wrap: wrap;
@@ -271,5 +274,13 @@ export default {
     letter-spacing: 0.01rem;
     width: 100%;
 }  
+.button1 {
+    width: 170px;
+    font-size: 0.7rem;
+}
+.button2 {
+    width: 170px;
+    font-size: 0.7rem;
+}
 }
 </style>

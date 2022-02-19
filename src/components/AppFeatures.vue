@@ -168,5 +168,11 @@ p {
     line-height: 30px;
     letter-spacing: 0.01em;
 }
+.featuresplit {
+    grid-gap: 0.9rem;
+}
+button {
+    font-size: 18px;
+}
 }
 </style>

@@ -1,9 +1,11 @@
 <template>
   <div class="socialsplit">
       <div>
+          <a href="https://twitter.com/femolaaa">
           <h5>
               Designed by Femola <span>❤</span>.
           </h5>
+          </a>
       </div>
       <div>
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

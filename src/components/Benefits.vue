@@ -144,7 +144,7 @@ export default {
      width: 100%;
  }
  .benefittext {
-     padding-left: 2rem;
+     padding-left: 1rem;
  }
  }
 </style>

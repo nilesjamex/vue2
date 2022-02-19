@@ -94,12 +94,16 @@ button {
 }
 
 @media screen and (max-width: 900px) {
+    nav {
+        margin: 1rem 0rem;
+    }
     .menu {
         display: inline-block;
         position: fixed;
         height: 100%;
         width: 100%;
         background-color: #00C7BE;
+        color: #fff;
         top: 0;
         bottom: 0;
         z-index: 1;
@@ -120,6 +124,7 @@ button {
     }
     li {
         font-size: 2rem;
+        color: #fff;
     }
     .activenav {
         transform: translateX(0);

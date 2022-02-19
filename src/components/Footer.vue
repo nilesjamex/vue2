@@ -110,4 +110,36 @@ h2 {
     letter-spacing: 0.01em;
     color: #08102D;
 }
+
+@media screen and (max-width: 900px) {
+    .footsplit {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 4rem;
+}
+}
+@media screen and (max-width: 768px) {
+    .listsplit {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 1rem 0rem;
+    width: 100%;
+}
+}
+@media screen and (max-width: 650px) {
+      .footsplit {
+    padding: 1rem 2rem;
+}
+    li {
+    margin: 0 0 0.7rem 0;
+    font-size: 0.8rem;
+    line-height: 30px;
+}
+h2 {
+    font-size: 1rem;
+    line-height: 30px;
+}
+
+}
 </style>

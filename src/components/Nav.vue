@@ -71,6 +71,8 @@ nav {
 ul {
     display: flex;
     grid-gap: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 li {
     font-family: 'Karla' sans-serif;

@@ -33,10 +33,12 @@ button {
     width: 218px;
     height: 62px;
 }
-
+a {
+  text-decoration: none;
+}
 @media screen and (max-width: 500px) {
   button {
-    font-size: 0.4rem;
+    font-size: 0.8rem;
 } 
 }
 #nav a.router-link-exact-active {

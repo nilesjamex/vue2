@@ -98,7 +98,7 @@ export default {
      font-size: 18px;
      height: 62px;
      padding: 0 2rem;
-     font-family: Karla;
+     font-family: 'Karla' sans-serif;
      font-style: normal;
      font-weight: 500;
      line-height: 30px;
@@ -125,5 +125,52 @@ export default {
      line-height: 30px;
      letter-spacing: 0.01em;
      color: #6E6E71;
+ }
+
+ @media screen and (max-width: 1024px) {
+     .waitsplit {
+     display: flex;
+     flex-direction: column-reverse;
+     align-items: center;
+     align-content: space-around;
+     padding: 0 12rem;
+ }
+  .waitlist__text {
+     align-self: center;
+ }
+ h2 {
+     font-size: 34px;
+     line-height: 40px;
+     letter-spacing: -0.02em;
+     color: #032406;
+     width: 100%;
+     margin: 2rem 0;
+ }
+ p {
+     font-size: 18px;
+     line-height: 30px;
+     letter-spacing: 0.01em;
+     width: 100%;
+     margin: 2rem 0;
+ }
+ }
+ @media screen and (max-width: 900px) {
+     h2 {
+     font-size: 1.5rem;
+     line-height: 30px;
+     letter-spacing: -0.02em;
+ }
+ p {
+     font-size: 1rem;
+     line-height: 20px;
+     letter-spacing: 0.01em;
+     width: 100%;
+     margin: 2rem 0;
+ }
+ }
+ @media screen and (max-width: 650px) {
+     .waitsplit {
+     padding: 0 2rem;
+ }
  }
 </style>

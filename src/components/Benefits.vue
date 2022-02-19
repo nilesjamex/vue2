@@ -107,4 +107,44 @@ export default {
      margin: 2rem 4rem;
      padding-left: 7rem;
  }
+
+ @media screen and (max-width: 1024px) {
+     .benefitsplit {
+     display: flex;
+     flex-direction: column-reverse;
+     justify-content: space-between;
+     padding: 10% 4% 0 0;
+ }
+ }
+ @media screen and (max-width: 900px) {
+     .benefittext {
+     margin: 2rem 2rem;
+     padding-left: 2rem;
+ }
+     h2 {
+     font-size: 1.5rem;
+     line-height: 30px;
+     width: 100%;
+ }
+ h5 {
+     font-size: 1rem;
+     line-height: 30px;
+     width: 100%;
+ }
+ }
+ @media screen and (max-width: 650px) {
+     h2 {
+     font-size: 1rem;
+     line-height: 30px;
+     width: 100%;
+ }
+ h5 {
+     font-size: 0.8rem;
+     line-height: 30px;
+     width: 100%;
+ }
+ .benefittext {
+     padding-left: 2rem;
+ }
+ }
 </style>

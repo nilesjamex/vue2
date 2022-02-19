@@ -13,7 +13,10 @@ export default {
 
 <style>
 * {
-  /* overflow-X: hidden; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -31,6 +34,11 @@ button {
     height: 62px;
 }
 
+@media screen and (max-width: 500px) {
+  button {
+    font-size: 0.4rem;
+} 
+}
 #nav a.router-link-exact-active {
   color: #42b983;
 }

@@ -110,7 +110,7 @@ p {
   position: absolute;
 }
 .btc {
-    animation: rotation 4s infinite linear;
+    animation: rotation 2s infinite linear;
     box-shadow: #D0D6F9;
 }
 @keyframes rotation {

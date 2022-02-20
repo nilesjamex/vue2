@@ -109,6 +109,18 @@ p {
   z-index: -1;
   position: absolute;
 }
+.btc {
+    animation: rotation 4s infinite linear;
+    box-shadow: #D0D6F9;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
 
 @media screen and (max-width: 1024px) {
   .line {
